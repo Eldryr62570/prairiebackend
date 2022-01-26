@@ -17,6 +17,7 @@
 
 <body>
     <?php 
+        require_once('./vendor/autoload.php');
         require_once("./Asset/script/navbar.php");
         require_once("./Asset/script/card.php");
         require_once("./Asset/script/formulaire.php");
