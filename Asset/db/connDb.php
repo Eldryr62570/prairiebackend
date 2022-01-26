@@ -1,11 +1,11 @@
 <?php 
 $host = 'localhost';
-$db = 'spawnarena';
+$dbname = 'spawnarena';
 $user = 'root';
 $psw = '';
 $port = 3306;
 $charset ='utf8mb4';
-$dsn ="mysql:host=$host;dbname=$db;port=$port;charset=$charset";
+$dsn ="mysql:host=$host;dbname=$dbname;port=$port;charset=$charset";
 //Options de debug de la BDD
 $options = [
     \PDO::ATTR_ERRMODE              => \PDO::ERRMODE_EXCEPTION,
@@ -15,7 +15,8 @@ $options = [
 ];
 
 try{
-     echo 'Database connexion established';
+    $db = new \PDO($dsn, $user, $psw, $options);
+    echo 'Database connexion established';
 
 }
 //Gestion des exeptions
