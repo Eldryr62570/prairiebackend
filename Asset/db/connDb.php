@@ -15,12 +15,15 @@ $options = [
 ];
 
 try{
+    //Creation de la bdd avec les paramétres néccésaires
     $db = new \PDO($dsn, $user, $psw, $options);
-    echo 'Database connexion established';
+    //Message pour la console
+    echo 'Database connexion established !<br>';
 
 }
 //Gestion des exeptions
 catch(\PDOException $e){
+    //On retourne le message d'erreur et le code d'erreur
     throw new \PDOException ($e -> getmessage(),$e -> getcode());
 }
 
