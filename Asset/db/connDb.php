@@ -1,6 +1,6 @@
 <?php 
 $host = 'localhost';
-$dbname = 'spawnarena';
+$dbname = 'gamelibrary';
 $user = 'root';
 $psw = '';
 $port = 3306;
@@ -18,8 +18,7 @@ try{
     //Creation de la bdd avec les paramétres néccésaires
     $db = new \PDO($dsn, $user, $psw, $options);
     //Message pour la console
-    echo 'Database connexion established !<br>';
-
+    echo 'Database connexion established !';
 }
 //Gestion des exeptions
 catch(\PDOException $e){

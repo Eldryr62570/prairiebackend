@@ -1,8 +1,3 @@
-<?php 
-    session_start();
-    
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,21 +11,7 @@
 </head>
 
 <body>
-    <?php 
-        require_once('./vendor/autoload.php');
-        require_once("./Asset/script/navbar.php");
-        require_once("./Asset/script/card.php");
-        require_once("./Asset/script/formulaire.php");
-        require_once("./Asset/script/footer.php");
-        require_once("./Asset/script/modaux.php");
-    ?>
-    <?php
-        if(isset($_SESSION)){
-            //On vide la session pour que le message ne s'afficher qu'une fois
-            $_SESSION = array();
-        }
-    ?>
-    
+   
 
 
 
